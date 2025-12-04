@@ -10,7 +10,7 @@
 <body>
      <div class="nav-bar">
           <div class="logo">
-               <h1>FLOWER</h1>
+            <div class="menu-icon">menu</div>   <h1>FLOWER</h1>
           </div>
 
           <div class="nav-links">
@@ -140,5 +140,21 @@
 
      </div>
 
+
+     <script>
+          let menu=document.getElementsByClassName('menu-icon')[0];
+          let isClick=true;
+          menu.addEventListener('click',function(){
+               const navlink=document.getElementsByClassName('nav-links')[0];
+               if(isClick){
+                    navlink.style.left="0%";
+                    isClick=false;
+               }else{
+                    navlink.style.left="-110%";
+                    isClick=true;
+               }
+
+          })
+     </script>
 </body>
 </html>
